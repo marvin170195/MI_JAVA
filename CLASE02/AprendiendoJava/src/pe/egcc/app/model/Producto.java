@@ -18,7 +18,16 @@ public class Producto {
     this.activo = true;
     System.out.println("Objeto creado.");
   }
+  
+  /**
+   * Constructor con parametros
+   * @param nombre Nombre del producto
+   * @param stock Stock del producto
+   * @param precio Precio del producto
+   * @param activo Estado del producto
+   */
 
+  
   @Override
   protected void finalize() throws Throwable {
     super.finalize(); 
