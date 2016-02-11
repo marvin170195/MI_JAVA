@@ -141,6 +141,10 @@ public class VentaView extends javax.swing.JFrame {
       // Datos
       double total = Double.parseDouble(txtTotal.getText());
       String tipo = cboTipo.getSelectedItem().toString();
+      // Verificar importe
+      if(total <= 0.0){
+        throw new Exception("Importe debe ser mayor que cero.");
+      }
       // proceso
       ItemDto[] data = control.procesar(tipo, total);
       // Mostrar tabla
